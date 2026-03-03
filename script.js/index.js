@@ -3,17 +3,31 @@ const createElements = (arr) => {
     return htmlElement.join(" ");
 
 };
+////////sound....
 
-
-const managespinner = (status) => {
-    if (status == true) {
-        document.getElementById("spinner").classList.remove("hidden");
-        document.getElementById("word-container").classList.add("hidden");
-    } else {
-        document.getElementById("word-container").classList.remove("hidden");
-        document.getElementById("spinner").classList.add("hidden");
-    }
+function pronounceWord(word) {
+  const utterance = new SpeechSynthesisUtterance(word);
+  utterance.lang = "en-EN"; // English
+  window.speechSynthesis.speak(utterance);
 }
+
+
+
+
+
+
+
+
+
+// const managespinner = (status) => {
+//     if (status == true) {
+//         document.getElementById("spinner").classList.remove("hidden");
+//         document.getElementById("word-container").classList.add("hidden");
+//     } else {
+//         document.getElementById("word-container").classList.remove("hidden");
+//         document.getElementById("spinner").classList.add("hidden");
+//     }
+// }
 
 
 
@@ -36,7 +50,7 @@ const removeActive = () => {
 //...........................................................................................................//
 //id,, ata diye je tate click kore sai button cak kore////
 const loadLevelword = (id) => {
-    managespinner(true);
+    // managespinner(true);
     // console.log(id);
     const url = `https://openapi.programming-hero.com/api/level/${id}`;
     fetch(url)
@@ -101,7 +115,7 @@ const displayLevelword = (words) => {
              <h2 class="font-bold text-4xl">একটি Lesson Select করুন।</h2>
              </div>
              `;
-        managespinner(false)
+        // managespinner(false)
         //  return;
     }
 
@@ -113,9 +127,11 @@ const displayLevelword = (words) => {
              <h2 class="font-bold text-xl"> ${word.word ? word.word : "শব্দ পাওয়া যায়নি"} </h2>
              <p class="font-semibold">Meaning /Prononuction</p>
              <div class="text-2xl font-medium  font-bangla">" ${word.meaning ? word.meaning : "শব্দ পাওয়া যায়নি"} / ${word.pronunciation ? word.pronunciation : "শব্দ পাওয়া যায়নি"}"</div>
-             <div onclick="loadworddetail(${word.id})" class="flex justify-between items-center">
-             <button class="btn bg-[#1A91FF10] hover:bg-[#1A91FF80]"><i class="fa-solid fa-circle-info"></i></button>
-             <button class="btn bg-[#1A91FF10] hover:bg-[#1A91FF80]"><i class="fa-solid fa-volume-high"></i></button>
+             <div  class="flex justify-between items-center">
+
+             <button onclick="loadworddetail(${word.id})"  class="btn bg-[#1A91FF10] hover:bg-[#1A91FF80]"><i class="fa-solid fa-circle-info"></i></button>
+
+             <button onclick="pronounceWord('${word.word}')" class="btn bg-[#1A91FF10] hover:bg-[#1A91FF80]"><i class="fa-solid fa-volume-high"></i></button>
              </div>
              </div> 
             
@@ -123,10 +139,10 @@ const displayLevelword = (words) => {
 
         wordcontainer.append(card);
     });
-    managespinner(false);
+    // managespinner(false);
 };
 
-//.........................................................................................................................//
+//...................................................................................A......................................//
 
 
 ////ai section holo butto dainamick... vabe kaj kore ....
@@ -166,4 +182,4 @@ document.getElementById("btn-search").addEventListener("click", () => {
 
 
 
-})
+});
