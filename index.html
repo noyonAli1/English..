@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- logo png add korlam -->
+    <title>English | Berst Platform learning English</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <!-- font osam .con -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--.........-->
+    <!-- dasi ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- tailwind css -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- .das ui link. -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- style link css -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="container mx-auto">
+
+    <header>
+        <div class="navbar bg-base-100 shadow-sm ">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="-1"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow space-y-2">
+                        <li> <a href="" class=""> <span><i class="fa-solid fa-circle-question"></i></span>FAQ</a></li>
+
+                        <li><a href="" class=""> <span><i class="fa-solid fa-book-open"></i></span>Learn</a></li>
+
+                        <li> <a href="" class=""><span><i
+                                        class="fa-solid fa-arrow-right-from-bracket"></i></span>Logout</a></li>
+                    </ul>
+                </div>
+                <a href="" class=" flex justify-center items-center gap-1">
+                    <span class="text-lg font-bold">English</span>
+                    <img src="./assets/logo.png" alt="">
+                    <span class="font-bangla font-semibold  text-lg ">জানালা</span>
+                </a>
+            </div>
+            <div class="navbar-end hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 gap-4">
+                    <li> <a href="" class="btn btn-outline btn-primary"> <span><i
+                                    class="fa-solid fa-circle-question"></i></span>FAQ</a></li>
+
+                    <li><a href="" class="btn btn-outline btn-primary"> <span><i
+                                    class="fa-solid fa-book-open"></i></span>Learn</a></li>
+
+                    <li> <a href="" class="btn btn-outline btn-primary"><span><i
+                                    class="fa-solid fa-arrow-right-from-bracket"></i></span>Logout</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </header>
+    <!-- //.........................................// -->
+    <section class="flex flex-col-reverse lg:flex-row gap-10 justify-between items-center py-5 w-11/12 mx-auto">
+        <div class="content flex-1 text-center md:text-left ">
+            <h2 class="text-4xl font-bold mb-8"><span class="text-blue-500">English </span>is Easy!!</h2>
+            <p class="font-bangla">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে
+                চান, আমাদের
+                Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+
+            <form class="fieldset border-gray-300 rounded-box w-xs border p-4 mt-6 mx-auto lg:mx-0">
+                <input type="text" class="input validator" placeholder="Enter Your Name" required />
+                <input type="password" class="input validator" placeholder="Password" required />
+
+                <button class="btn btn-primary" type="submit">Get Started</button>
+            </form>
+        </div>
+        <div class="image flex-1">
+            <img src="./assets/Noyon.png" alt="">
+        </div>
+    </section>
+    <!-- ////............................///// -->
+    <section>
+        <h2 class="text-4xl font-bold mb-8 text-center"><span class="text-blue-500">Let's</span>Learn Vocabularies</h2>
+
+        <div id="level-container" class="flex gap-6 flex-wrap justify-center">
+
+        </div>
+
+    </section>
+    <!-- //// -->
+    <section id="word-container" class="bg-gray-100  p-10 my-10 grid grid-cols-3 gap-5 ">
+
+        <div class="text-center bg-sky-100 col-span-3 py-10 rounded-xl space-y-5 font-bangla">
+            <p class="text-xl font-medium text-gray-400">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</p>
+            <h2 class="font-bold text-4xl">নেক্সট Lesson এ যান</h2>
+        </div>
+
+    </section>
+
+    <script src="./script.js/index.js"></script>
+</body>
+
+</html>
